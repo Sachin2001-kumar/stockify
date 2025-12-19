@@ -148,7 +148,11 @@
   }
 
   .yellow-btn {
-    @apply h-12 cursor-pointer bg-gradient-to-b from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 text-gray-950 font-medium text-base rounded-lg shadow-lg disabled:opacity-50;
+    @apply h-12 cursor-pointer bg-gradient-to-b from-yellow-400 to-yellow-500 text-gray-950 font-medium text-base rounded-lg shadow-lg disabled:opacity-50;
+  }
+
+  .yellow-btn:hover {
+    @apply from-yellow-500 to-yellow-400;
   }
 
   .home-wrapper {
@@ -204,15 +208,15 @@
   }
 
   .form-input {
-    @apply h-12 px-3 py-3 text-white text-base placeholder:text-gray-500 border-gray-600 bg-gray-800 rounded-lg focus: !border-yellow-500 focus:ring-0;
+    @apply h-12 px-3 py-3 text-white text-base placeholder:text-gray-500 border-gray-600 bg-gray-800 rounded-lg focus:border-yellow-500 focus:ring-0;
   }
 
   .select-trigger {
-    @apply w-full !h-12 px-3 py-3 text-base border-gray-600 bg-gray-800 text-white rounded-lg focus: !border-yellow-500 focus:ring-0;
+    @apply w-full !h-12 px-3 py-3 text-base border-gray-600 bg-gray-800 text-white rounded-lg focus:border-yellow-500 focus:ring-0;
   }
 
   .country-select-trigger {
-    @apply h-12 px-3 py-3 text-base w-full justify-between font-normal border-gray-600 bg-gray-800 text-gray-400 rounded-lg focus: !border-yellow-500 focus:ring-0;
+    @apply h-12 px-3 py-3 text-base w-full justify-between font-normal border-gray-600 bg-gray-800 text-gray-400 rounded-lg focus:border-yellow-500 focus:ring-0;
   }
 
   .country-select-input {
@@ -224,19 +228,35 @@
   }
 
   .country-select-item {
-    @apply text-white cursor-pointer px-3 py-2 rounded-sm bg-gray-800 hover: !bg-gray-600;
+    @apply text-white cursor-pointer px-3 py-2 rounded-sm bg-gray-800;
+  }
+
+  .country-select-item:hover {
+    @apply !bg-gray-600;
   }
 
   .footer-link {
-    @apply text-gray-400 font-medium hover:text-yellow-400 hover:underline transition-colors;
+    @apply text-gray-400 font-medium transition-colors;
+  }
+
+  .footer-link:hover {
+    @apply text-yellow-400 underline;
   }
 
   .search-text {
-    @apply cursor-pointer hover:text-yellow-500;
+    @apply cursor-pointer;
+  }
+
+  .search-text:hover {
+    @apply text-yellow-500;
   }
 
   .search-btn {
-    @apply cursor-pointer px-4 py-2 w-fit flex items-center gap-2 text-sm md:text-base bg-yellow-500 hover:bg-yellow-500 text-black font-medium rounded;
+    @apply cursor-pointer px-4 py-2 w-fit flex items-center gap-2 text-sm md:text-base bg-yellow-500 text-black font-medium rounded;
+  }
+
+  .search-btn:hover {
+    @apply bg-yellow-500;
   }
 
   .search-dialog {
@@ -252,7 +272,7 @@
   }
 
   .search-list-indicator {
-    @apply px-5 py-2
+    @apply px-5 py-2;
   }
 
   .search-list-empty {
@@ -292,11 +312,19 @@
   }
 
   .watchlist-btn {
-    @apply bg-yellow-500 text-base hover:bg-yellow-500 text-gray-900 w-full rounded h-11 font-semibold cursor-pointer;
+    @apply bg-yellow-500 text-base text-gray-900 w-full rounded h-11 font-semibold cursor-pointer;
+  }
+
+  .watchlist-btn:hover {
+    @apply bg-yellow-500;
   }
 
   .watchlist-remove {
-    @apply bg-red-500 ! hover:bg-red-500 ! text-gray-900 !
+    @apply bg-red-500 text-gray-900;
+  }
+
+  .watchlist-remove:hover {
+    @apply bg-red-500;
   }
 
   .watchlist-empty-container {
@@ -332,11 +360,19 @@
   }
 
   .watchlist-icon-btn {
-    @apply w-fit cursor-pointer hover:bg-transparent ! text-gray-400 hover:text-yellow-500;
+    @apply w-fit cursor-pointer text-gray-400;
+  }
+
+  .watchlist-icon-btn:hover {
+    @apply bg-transparent text-yellow-500;
   }
 
   .watchlist-icon-added {
-    @apply !text-yellow-500 hover: !text-yellow-600;
+    @apply text-yellow-500;
+  }
+
+  .watchlist-icon-added:hover {
+    @apply text-yellow-600;
   }
 
   .watchlist-icon {
@@ -344,7 +380,11 @@
   }
 
   .trash-icon {
-    @apply h-4 w-4 text-gray-400 hover:text-red-400;
+    @apply h-4 w-4 text-gray-400;
+  }
+
+  .trash-icon:hover {
+    @apply text-red-400;
   }
 
   .star-icon {
@@ -356,11 +396,15 @@
   }
 
   .watchlist-table {
-    @apply !relative overflow-hidden !w-full bg-gray-800 border !border-gray-600 !rounded-lg;
+    @apply relative overflow-hidden w-full bg-gray-800 border border-gray-600 rounded-lg;
   }
 
   .table-header-row {
-    @apply text-gray-400 font-medium bg-gray-700 border-b border-gray-600 hover:bg-gray-700;
+    @apply text-gray-400 font-medium bg-gray-700 border-b border-gray-600;
+  }
+
+  .table-header-row:hover {
+    @apply bg-gray-700;
   }
 
   .table-header:first-child {
@@ -368,15 +412,23 @@
   }
 
   .table-row {
-    @apply border-b cursor-pointer text-gray-100 border-gray-600 hover:bg-gray-700/50 transition-colors;
+    @apply border-b cursor-pointer text-gray-100 border-gray-600 transition-colors;
+  }
+
+  .table-row:hover {
+    @apply bg-gray-700/50;
   }
 
   .table-cell {
-    @apply font-medium text-base
+    @apply font-medium text-base;
   }
 
   .add-alert {
-    @apply flex text-sm items-center whitespace-nowrap gap-1.5 px-3 w-fit py-2 text-yellow-600 border border-yellow-600/20 rounded font-medium bg-transparent hover:bg-transparent cursor-pointer transition-colors;
+    @apply flex text-sm items-center whitespace-nowrap gap-1.5 px-3 w-fit py-2 text-yellow-600 border border-yellow-600/20 rounded font-medium bg-transparent cursor-pointer transition-colors;
+  }
+
+  .add-alert:hover {
+    @apply bg-transparent;
   }
 
   .watchlist-news {
@@ -384,7 +436,11 @@
   }
 
   .news-item {
-    @apply bg-gray-800 rounded-lg border w-full border-gray-600 p-4 duration-200 hover:border-gray-600 cursor-pointer;
+    @apply bg-gray-800 rounded-lg border w-full border-gray-600 p-4 duration-200 cursor-pointer;
+  }
+
+  .news-item:hover {
+    @apply border-gray-600;
   }
 
   .news-tag {
@@ -404,7 +460,11 @@
   }
 
   .news-cta {
-    @apply text-sm align-bottom text-yellow-500 hover:text-gray-400;
+    @apply text-sm align-bottom text-yellow-500;
+  }
+
+  .news-cta:hover {
+    @apply text-gray-400;
   }
 
   .alert-dialog {
@@ -448,11 +508,19 @@
   }
 
   .alert-update-btn {
-    @apply text-gray-400 rounded-full bg-transparent hover:bg-green-500/15 cursor-pointer;
+    @apply text-gray-400 rounded-full bg-transparent;
+  }
+
+  .alert-update-btn:hover {
+    @apply bg-green-500/15;
   }
 
   .alert-delete-btn {
-    @apply text-gray-400 rounded-full hover:bg-red-600/15 bg-transparent cursor-pointer transition-colors;
+    @apply text-gray-400 rounded-full bg-transparent cursor-pointer transition-colors;
+  }
+
+  .alert-delete-btn:hover {
+    @apply bg-red-600/15;
   }
 }
 
@@ -481,7 +549,6 @@
 .tradingview-widget-container__widget {
   background-color: #141414 !important;
   height: 100% !important;
-
 }
 
 .widget-stock-heatmap-container .screenerMapWrapper-BBVfGP0b {
