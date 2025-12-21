@@ -62,6 +62,7 @@ const SingUp = () => {
         name="Email"
         label="Email"
         placeholder="schn@gmail.com"
+        type="email"
         register={register}
         error={errors.email}
         validation={{ required: "Email is required", minLength: 2 }}
