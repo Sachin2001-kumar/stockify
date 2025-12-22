@@ -51,7 +51,7 @@ declare global {
 
   type FooterLinkProps = {
     text: string;
-    linkText: string;
+    LinkText: string;
     href: string;
   };
 
